@@ -9,6 +9,7 @@
 $ git clone https://github.com/qja1998/GitAuto.git
 ```
 
+
 2. .env 파일을 설정합니다.
 
 `.env.tamplate` -> `.env`로 파일명을 변경한 후 자신에 맞는 정보로 수정합니다.
@@ -21,6 +22,7 @@ USER = YOUR_GITLAB_ID
 ROOT_PATH = YOUR_ROOT_DIR
 ```
 
+
 3. `git_auto.py`를 실행합니다.
 
 ```bash
@@ -28,12 +30,14 @@ clone / push:
 ```
 원하는 작업을 선택합니다.
 
+
 - Clone task
 
 ```bash
 Subject:
 ```
 clone 하고싶은 과목을 입력합니다. (python, web, ect...)
+
 
 ```bash
 Set number:
@@ -51,9 +55,13 @@ Select one
 ```
 
 원하는 작업을 선택합니다.(1, 2, 3, 4)
+
 default는 push이며 입력하지 않고 enter를 입력할 경우 push가 선택됩니다.
+
 push를 선택하면 push, commit, add, backup을 모두 수행합니다.
+
 commit를 선택하면 commit, add, backup을 모두 수행하며. add를 선택하면 add, backup을 모두 수행하는 방식입니다.
+
 백업만 하고 싶다면 4번을 선택하면 됩니다.
 
 ```bash
@@ -68,6 +76,7 @@ Backup directory absolute path(without git).If you want to skip it, press Enter:
 ```
 
 backup하고 싶은 target directory를 지정합니다. 절대경로를 입력해주면 되며, `.git`을 제외하고 복사됩니다.
+
 만약 backup을 원하지 않으면 아무것도 입력하지 않으면 됩니다.
 
 ```bash
