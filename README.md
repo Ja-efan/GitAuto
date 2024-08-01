@@ -9,6 +9,7 @@
 $ git clone https://github.com/qja1998/GitAuto.git
 ```
 1-1. dotenv 가 설치되어 있지 않다면 설치합니다.
+
 `pip install python-dotenv`
 
 
