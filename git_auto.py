@@ -18,4 +18,4 @@ if __name__ == '__main__':
         clone_git(USER)
 
     elif task == 'push':
-        push_git(USER)
+        push_git()
