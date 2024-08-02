@@ -4,8 +4,6 @@ import subprocess
 from dotenv import load_dotenv
 
 load_dotenv()
-USER_ID = os.environ.get('USER_ID')
-
 
 def progressBar(count_value, total, suffix=''):
     bar_length = 100
@@ -16,7 +14,8 @@ def progressBar(count_value, total, suffix=''):
     sys.stdout.flush()
 
 
-def clone_git(USER_ID):
+def clone_git(user):
+    print(f"gitlab ID: {user}")
     subject = input("Subject: ")
     if not os.path.exists(subject):
         os.makedirs(subject)
@@ -42,12 +41,12 @@ def clone_git(USER_ID):
                 subprocess.run(['git', 'pull', 'origin', 'master'])
                 os.chdir('..')
             else:
-                url = f"https://lab.ssafy.com/{USER_ID}/{subject}_{sep}_{set_num}_{st}"
+                url = f"https://lab.ssafy.com/{user}/{subject}_{sep}_{set_num}_{st}"
                 print(f"git clone {url}")
                 subprocess.run(['git', 'clone', url])
 
 
-def push_git(USER_ID):
+def push_git():  # USER_ID 사용되지 않음 
     print("Select one")
     push_task = input("[1.push] / 2.commit / 3.add / 4.only backup: ")
     push_task = 1 if not push_task else int(push_task)
