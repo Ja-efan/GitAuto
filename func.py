@@ -64,7 +64,7 @@ def push_git():  # USER_ID 사용되지 않음
     if backup_dir:
         print(f"Backup files to {backup_dir}")
     for i, dir in enumerate(dir_list):
-        _, sep, set_num_dir, st = dir.split('_')
+        *_, sep, set_num_dir, st = dir.split('_')
         if set_num_dir == set_num:
             os.chdir(dir)
             if push_task <= 3:
